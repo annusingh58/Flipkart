@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Flipkert Signup</title>
+    <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
+
    <style>
      *{
         padding: 0;
@@ -168,7 +170,7 @@
 
             </div>
             <div id="right">
-                <form onclick ="Signup(event)">
+               <form onsubmit="signup(event)">
                     <div id="form">
                         <div><input id="fname" type="text" placeholder=" name"/></br> </div>
                         <div><input id="femail" type="email" placeholder=" email id"/></br> </div>
@@ -176,7 +178,7 @@
                         <div><input id="fconfirmpassword" type="password" placeholder="confirmpassword"/></br></div>
 
                         <P> By continuing, you agree to Flipkart's <span>Terms of Use and Privacy Policy</span>.</P>
-                        <div><input type="submit" value="Signup"/></div>
+                        <div><input type="submit" value="signup"/></div>
                         <h4>New to Flipkart? Create an account</h4>
 
 
@@ -195,4 +197,6 @@
     
 </body>
 <script src="./server.js"></script>
+
+
 </html>

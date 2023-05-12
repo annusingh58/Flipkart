@@ -1,6 +1,6 @@
-function signupevent() {
-    eventpreventDefault();
-    alert(working);
+function signup(event){
+    event.preventDefault()
+    alert("working");
 
 
 
@@ -45,7 +45,7 @@ function signupevent() {
             }
         }
         else{
-            console.log("passeord should be more then 8 digit");
+            console.log("password should be more then 8 digit");
         }
          
         }
@@ -55,7 +55,7 @@ function signupevent() {
     }
 
 }
-function login(event){
+function Login(event){
     event.preventDefault();
 
     var email=document.getElementById("lemail").value;
