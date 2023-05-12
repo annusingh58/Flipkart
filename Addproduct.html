@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addproductflipkart</title>
+</head>
+<body>
+    <form onsubmit="addproduct(event)">
+        <label> Name</label><br/>
+        <input id="pname" type="text" /></br>
+        <label>product Price</label><br/>
+        <input id="pprice" type="number" /></br>
+        <label>product Image url</label><br/>
+        <input id="pimage" type="text" /></br>
+        <input type="submit"/> </br>
+    </form>
+    <script>
+        function addproduct(event){
+            event.preventDefault();
+            alert("Adding product");
+
+
+            var proname=document.getElementById("pname").value;
+            var proprice=document.getElementById("pprice").value;
+            var proimage=document.getElementById("pimage").value;
+
+            var fproduct={proname,proprice,proimage};
+
+            var flipkartls=JSON.parse(localStorage.getItem("flipkartproduct")) || [];
+            flipkartls.push(fproduct);
+            localStorage.setItem("flipkartproduct",JSON.stringify(flipkartls));
+            alert("product added successfully");
+            window.location.href = './electronics.html';
+        }
+    </script>
+    
+</body>
+</html>
