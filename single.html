@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>furniture</title>
+    <title>single page</title>
     <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
     <style>
         *{
@@ -141,6 +141,7 @@
              #slider{
                 height: 280px;
                 width: 100%;
+                
                 /* border:1px solid red; */
              }
              #slider>img{
@@ -154,7 +155,8 @@
             /* border:1px solid red; */
             display: flex;
             justify-content: space-between;
-            margin-top: 45px;
+            margin-top: 25px;
+
            }
            #singlePro{
             width:24%;
@@ -306,20 +308,79 @@
 
         </div>
         <div id="product">
-            <div >
-            
-                    <!-- <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/sofa-set/v/4/y/20-10-brown-polyester-2-1-1-25-8-30-8-8-15-7657-20-mamta-15-original-imaggurrd2rabrsu.jpeg?q=70"/> -->
-                
                 <div>
-                    <!-- <h3>wooden sofa set</h3>
-                    <p>15000</p> -->
+                    <img src=""/>
+                    <div id="cart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>ADD TO BAG</button>
+                        <button><i class="fa-regular fa-heart"></i>WHISLIST</button>
+                    </div>
+                </div>
+
+                <div>
+                    <h1 id="name">Sleepyhead 3 Seater Double Foam Fold Out Sofa Cum Bed </h1>
+                    <p> (Finish Color - Deep Teal Delivery Condition - DIY(Do-It-Yourself))</p>
+                    <div>
+                        <p><b>4.2 <i class="fa-solid fa-star"></i></b>| 4.8k Ratings</p>
+                    </div>
+                </div>
+
+
+                <div>
+                    <p><span id="price">₹19000 </span><span>MRP <del>₹15000</del></span> <span> (28% OFF)</span></p>
+                    <p>inclusive of all taxes</p>
+                    
+                   
+                </div>
+
+
+                <div>
+                    <div>
+                        <h1>DELIVERY OPTIONS<i class="fa-solid fa-truck"></i></h1>
+                        <input placeholder="Enter pincode" />
+                        <p>Please enter PIN code to check delivery time & Pay on Delivery Availability</p>
+                        <div>
+                            <p>100% Original Products</p>
+                            <p>Pay on delivery might be available</p>
+                            <p>Easy 10 days returns and exchanges</p>
+                            <p>Try & Buy might be available</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1>BEST OFFERS<i class="fa-solid fa-tag"></i></h1>
+                
+                        <ul>
+                            <li>Applicable on: Orders above Rs. 899(only on first purchase)</li>
+
+                            <li>Coupon Discount: Rs.500 off(check cart for final savings)</li>
+                        </ul>
+                        <p class="para">View Eligible Products</p>
+                        <h2>10% Instant Discount on RuPay Credit Cards</h2>
+                        <ul>
+                            <li>Min Spend Rs 2,000, Max Discount Rs 500.</li>
+                        </ul>
+                        <p class="para">Terms & Condition</p>
+                        <h2>EMI option available</h2>
+                        <ul>
+                            <li>
+                                EMI starting from Rs.127/month
+                            </li>
+                        </ul>
+                        <p id="pg">View Plan</p>
+                    </div>
+
+
+
+                    <div>
+                        <h1>Specifications</h1>     
+                        <p>See More</p>
                     
 
-                </div>
-            </div>
-            <div></div>
-            <div></div>
-            <div></div>
+                     </div>
+
+
+
+            
             
 
         </div>
@@ -362,7 +423,7 @@
     </div>
     
 </body>
-<script>
+<!-- <script>
     window.onload=function(){
         alert("work on");
         var user=JSON.parse(localStorage.getItem("flipkart_currentuser"));
@@ -391,10 +452,8 @@
         var singleProduct=JSON.stringify(product);
         alert("working");
         localStorage.setItem("flipkartCurrentProduct",singleProduct)
-         window.location.href="./single.html";
-         console.log(flipkartCurrentProduct);
-
-
+        console.log(flipkartCurrentProduct);
+        window.location.href="./cart.html";
 
     }
     function Logout(){
@@ -402,7 +461,7 @@ alert("Logout Successfully");
 localStorage.removeItem("flipkart_currentuser");
 window.location.reload();
 }
-</script>
+</script> -->
 
 
 
