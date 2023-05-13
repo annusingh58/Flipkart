@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #screen{
+            height: 2000px;
+            width: 100%;
+            /* border:5px solid red; */
+        }
+        #navbar{
+            height: 60px;
+            width:100%;
+            border: 1px solid black;
+            background-color: rgb(40,116,240);
+        }
+        #bar{
+            height:60px ;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            margin-top: 5px;
+            /* justify-content: space-between; */
+        }
+        #bar>div:nth-child(1){
+            height: 40px;
+            width:10%;
+            /* border:1px solid red; */
+        }
+        #bar>div:nth-child(1)>img{
+            height: 100%;
+            width:100%;
+        }
+        #bar>div:nth-child(2){
+            width:40% ;
+            height: 40px;
+            /* border:1px solid red; */
+            margin-left:10px
+        }
+        #bar>div:nth-child(2)>input{
+            width: 100%;
+            height: 100%;
+        }
+        #bar>div:nth-child(3){
+            width: 12%;
+            height: 30px;
+            /* border:1px solid red; */
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+         #bar>div:nth-child(3)>button{
+            width: 100%;
+            height: 100%;
+            color: blue;
+            font-size: 18px;
+            border: white;
+         }
+            #bar>div:nth-child(4){
+            width: 12%;
+            height: 30px;
+            /* border:1px solid red; */
+            margin-left: 30px;
+            margin-top: 5px;
+            }
+             #bar>div:nth-child(4)>p{
+                color: white;
+                 width: 100%;
+                 height: 100%;
+                 font-weight: bold;
+                 font-size: 18px;
+             }
+            #bar>div:nth-child(5){
+            width: 5%;
+            height: 30px;
+            /* border:1px solid red; */
+            margin-left: 30px;
+            margin-top: 5px;
+
+            }
+             #bar>div:nth-child(5)>h3{
+                color: white;
+                 width: 100%;
+                 height: 100%;
+                
+                 font-size: 18px;
+             }
+             #bar>div:nth-child(6){
+            width: 10%;
+            height: 30px;
+            /* border:1px solid red; */
+            margin-left: 30px;
+            margin-top: 7px;
+            display: flex;
+            color: white;
+            text-align: center;
+
+
+             }
+              #bar>div:nth-child(6)>i{
+                margin-top: 5px;
+              }
+             #bar>div:nth-child(6)>P{
+                margin-left: 7px;
+                font-size: 17px;
+                margin-top: 3px;
+
+             }
+             #body{
+                height: 550px;
+                width: 100%;
+                border:1px solid red;
+                margin-top: 20px;
+             }
+             #product{
+                height: 500px;
+                width: 90%;
+                margin: auto;
+                border: 1px solid black;;
+                display: flex;
+                justify-content: space-between;
+
+             }
+             #left{
+                height: 100%;
+                width: 65%;
+                border:1px solid green;
+             }
+             #left>div:nth-child(1){
+                height: 50px;
+                display: flex;
+                font-size: 14px;
+                justify-content: space-between;
+                padding:10px;
+                padding-left: 20px;
+                color: rgb(40,116,240);
+                border:1px solid gainsboro;
+             }
+             #left>div:nth-child(2){
+                height: 50px;
+                border:1px solid ghostwhite;
+                 padding-left: 15px;
+                 font-size: 18px;
+                 color: rgb(88, 87, 87);
+                 margin-top: 10px;
+             }
+                #left>div:nth-child(3){
+                    height: 150px;
+                    width: 100%;
+                    display: flex;
+                    border:1px solid ghostwhite ; 
+                    justify-content: space-between;
+                }
+                #left>div:nth-child(3)>div:nth-child(1){
+                    height:100%;
+                    width:25%;
+                    border:1px solid red;
+                    
+                }
+                  #left>div:nth-child(3)>div:nth-child(1)>img{
+                    height:100%;
+                    width:100%;
+                    
+                    
+                }
+                #left>div:nth-child(3)>div:nth-child(2){
+                    height:100%;
+                    width:50%;
+                    border:1px solid red;
+                    
+                }
+                #left>div:nth-child(3)>div:nth-child(2)>h3{
+                    margin-top: 5px;
+                    color: rgb(39, 37, 37);
+
+                }
+                 #left>div:nth-child(3)>div:nth-child(2)>p{
+                    margin-top: 5px;
+                    color: rgb(32, 30, 30);
+
+                }
+                #left>div:nth-child(3)>div:nth-child(3){
+                    height:100%;
+                    width:15%;
+                    border:1px solid red;
+                    
+                }
+                 #left>div:nth-child(3)>div:nth-child(3)>p{
+                    margin-top: 15px;
+                    color: rgb(32, 30, 30);
+                    font-size: 18px;
+
+
+                 }
+                
+
+
+             #right{
+                height: 100%;
+                width:30%;
+                 border:1px solid green;
+
+             }
+             #right>h3{
+                margin-top: 10px;
+                font-size: 18px;
+                padding: 10px;
+                height: 50px;
+                width: 100%;
+                border:1px solid gainsboro;
+                
+             }
+             #right1{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 25px;
+                padding: 10px;
+               
+             }
+             #right1>div>p{
+                 margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 18px;
+             }
+
+            </style>
+           
+</head>
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div id="bar">
+             <div>
+                 <img src="./fliptkart.jpeg"/>
+             </div>
+             <div>
+                 <input type="search" placeholder="search for product,brands and more" />
+                 
+             </div>
+             <div id="switch">
+                 <button>Login</button>
+             </div>
+             <div>
+                 <p>Become a Seller</p>
+             </div>
+             <div>
+                 <h3>More</h3>
+             </div>
+             <div>
+                 <i class="fa-solid fa-cart-shopping"></i>
+                 <P>Cart</P>
+ 
+             </div>
+             <div id="Logout"></div>
+ 
+            </div>
+ 
+ 
+         </div>
+         <div id="body">
+            <div id="product">
+                <div id="left">
+                    <div>
+                        <h1>Flipkart</h1>
+                        <h1>Grocery</h1>
+                    </div>
+                    <div>
+                        <h3>From Saved Address</h3>
+                        
+                    </div>
+                    <div>
+                       <div>
+                        <img src=""/>
+                       </div>
+                       <div>
+                        <h3>Fresh Up Solid Colour Sofa cum Bed </h3>
+                        <p>Finish Colour</p>
+                        <p>18000</p>
+                       </div>
+                       <div>
+                        <p>Delivery in 7 days</p>
+                       </div>
+                    </div>
+                
+                </div>
+                <div id="right">
+                    <h3>PRICE DETAILS</h3>
+                    <div id="right1">
+                        <div>
+                            <p>Price</p>
+                            <p>Discount</p>
+                            <p>Delivery Charges</p>
+                            <h3>Total Amount</h3>
+                        </div>
+                        <div>
+                            <p>20123</p>
+                            <p>1000</p>
+                            <p>free</p>
+                            <h3>19123</h3>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+         </div>
+        
+    </div>
+</body>
+<script>
+    window.onload=function(){
+        // alert("working");
+        var user=JSON.parse(localStorage.getItem("flipkart_currentuser"));
+        var div=document.getElementById("switch");
+        var divforlogout=document.getElementById("Logout");
+        var name=`<h5>${user.uname}</h5>`;
+        var button=`<button onclick="Logout()">Logout</button>`;
+        div.innerHTML=name;
+        divforlogout.innerHTML=button;
+
+
+        var currentuser=JSON.parse(localStorage.getItem("flipkart_currentuser"));
+        var userdata=JSON.parse(localStorage.getItem("flipkartusers"))
+        var divtoappend=document.getElementById("product");
+        console.log(userdata);
+
+        var products;
+        for(i=0;i<userdata.length;i++){
+            if(currentuser.uemail == userdata[i].uemail){
+                 products=userdata[i].cartproduct;
+             }
+         }
+         var structure="";
+         console.log(userdata);
+         for(var i=0;i<products.length;i++){
+            structure+=`<div id="product">
+                <div id="left">
+                    <div>
+                        <h1>Flipkart</h1>
+                        <h1>Grocery</h1>
+                    </div>
+                    <div>
+                        <h3>From Saved Address</h3>
+                        
+                    </div>
+                    <div>
+                       <div>
+                        <img src="${product.proimage}"/>
+                       </div>
+                       <div>
+                        <h3>${product.proname}</h3>
+                        <p>Finish Colour</p>
+                        <p>${product.proprice}</p>
+                       </div>
+                       <div>
+                        <p>Delivery in 7 days</p>
+                       </div>
+                    </div>
+                
+                </div>
+                <div id="right">
+                    <h3>PRICE DETAILS</h3>
+                    <div id="right1">
+                        <div>
+                            <p>Price</p>
+                            <p>Discount</p>
+                            <p>Delivery Charges</p>
+                            <h3>Total Amount</h3>
+                        </div>
+                        <div>
+                            <p>20123</p>
+                            <p>1000</p>
+                            <p>free</p>
+                            <h3>19123</h3>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>`
+         }
+
+         divtoappend.innerHTML=structure;
+
+
+        }
+
+
+function Logout(){
+alert("Logout Successfully");
+localStorage.removeItem("flipkart_currentuser");
+window.location.reload();
+}
+</script>
+</html>
