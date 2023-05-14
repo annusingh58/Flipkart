@@ -115,16 +115,16 @@
 
              }
              #body{
-                height: 550px;
+                /* height: 550px; */
                 width: 100%;
-                border:1px solid red;
+                /* border:1px solid red; */
                 margin-top: 20px;
              }
              #product{
-                height: 500px;
+                /* height: 500px; */
                 width: 90%;
                 margin: auto;
-                border: 1px solid black;;
+                /* border: 1px solid black; */
                 display: flex;
                 justify-content: space-between;
 
@@ -132,10 +132,10 @@
              #left{
                 height: 100%;
                 width: 65%;
-                border:1px solid green;
+                /* border:1px solid green; */
              }
              #left>div:nth-child(1){
-                height: 50px;
+                /* height: 50px; */
                 display: flex;
                 font-size: 14px;
                 justify-content: space-between;
@@ -145,55 +145,57 @@
                 border:1px solid gainsboro;
              }
              #left>div:nth-child(2){
-                height: 50px;
+                /* height: 50px; */
                 border:1px solid ghostwhite;
                  padding-left: 15px;
                  font-size: 18px;
                  color: rgb(88, 87, 87);
                  margin-top: 10px;
              }
-                #left>div:nth-child(3){
+             #cartleft{
+                width:100%;
+             }
+                #left1{
                     height: 150px;
                     width: 100%;
                     display: flex;
-                    border:1px solid ghostwhite ; 
+                    /* border:5px solid red ;  */
                     justify-content: space-between;
+                    margin-bottom: 20px;
                 }
-                #left>div:nth-child(3)>div:nth-child(1){
+                #left1>div:nth-child(1){
                     height:100%;
                     width:25%;
-                    border:1px solid red;
+                    /* border:1px solid red; */
                     
                 }
-                  #left>div:nth-child(3)>div:nth-child(1)>img{
-                    height:100%;
+                #left1>div:nth-child(1)>img{
                     width:100%;
-                    
-                    
+                    height:100%;
                 }
-                #left>div:nth-child(3)>div:nth-child(2){
+                #left1>div:nth-child(2){
                     height:100%;
                     width:50%;
-                    border:1px solid red;
+                    /* border:1px solid red; */
                     
                 }
-                #left>div:nth-child(3)>div:nth-child(2)>h3{
+                #left1>div:nth-child(2)>h3{
                     margin-top: 5px;
                     color: rgb(39, 37, 37);
 
                 }
-                 #left>div:nth-child(3)>div:nth-child(2)>p{
+                 #left1>div:nth-child(2)>p{
                     margin-top: 5px;
                     color: rgb(32, 30, 30);
 
                 }
-                #left>div:nth-child(3)>div:nth-child(3){
+                #left1>div:nth-child(3){
                     height:100%;
                     width:15%;
-                    border:1px solid red;
+                    /* border:1px solid red; */
                     
                 }
-                 #left>div:nth-child(3)>div:nth-child(3)>p{
+                 #left1>div:nth-child(3)>p{
                     margin-top: 15px;
                     color: rgb(32, 30, 30);
                     font-size: 18px;
@@ -276,18 +278,20 @@
                         <h3>From Saved Address</h3>
                         
                     </div>
-                    <div>
-                       <div>
-                        <img src=""/>
-                       </div>
-                       <div>
-                        <h3>Fresh Up Solid Colour Sofa cum Bed </h3>
-                        <p>Finish Colour</p>
-                        <p>18000</p>
-                       </div>
-                       <div>
-                        <p>Delivery in 7 days</p>
-                       </div>
+                    <div id="cartleft">
+                        <div id="left1">
+                            <div>
+                             <img src=""/>
+                            </div>
+                            <div>
+                             <h3>Fresh Up Solid Colour Sofa cum Bed </h3>
+                             <p>Finish Colour</p>
+                             <p>18000</p>
+                            </div>
+                            <div>
+                             <p>Delivery in 7 days</p>
+                            </div>
+                         </div>
                     </div>
                 
                 </div>
@@ -317,7 +321,7 @@
 </body>
 <script>
     window.onload=function(){
-        // alert("working");
+        alert("working");
         var user=JSON.parse(localStorage.getItem("flipkart_currentuser"));
         var div=document.getElementById("switch");
         var divforlogout=document.getElementById("Logout");
@@ -329,7 +333,7 @@
 
         var currentuser=JSON.parse(localStorage.getItem("flipkart_currentuser"));
         var userdata=JSON.parse(localStorage.getItem("flipkartusers"))
-        var divtoappend=document.getElementById("product");
+        var divtoappend=document.getElementById("cartleft");
         console.log(userdata);
 
         var products;
@@ -338,53 +342,24 @@
                  products=userdata[i].cartproduct;
              }
          }
+         console.log(products,"products here");
          var structure="";
          console.log(userdata);
          for(var i=0;i<products.length;i++){
-            structure+=`<div id="product">
-                <div id="left">
-                    <div>
-                        <h1>Flipkart</h1>
-                        <h1>Grocery</h1>
-                    </div>
-                    <div>
-                        <h3>From Saved Address</h3>
-                        
-                    </div>
-                    <div>
-                       <div>
-                        <img src="${product.proimage}"/>
-                       </div>
-                       <div>
-                        <h3>${product.proname}</h3>
-                        <p>Finish Colour</p>
-                        <p>${product.proprice}</p>
-                       </div>
-                       <div>
-                        <p>Delivery in 7 days</p>
-                       </div>
-                    </div>
-                
-                </div>
-                <div id="right">
-                    <h3>PRICE DETAILS</h3>
-                    <div id="right1">
-                        <div>
-                            <p>Price</p>
-                            <p>Discount</p>
-                            <p>Delivery Charges</p>
-                            <h3>Total Amount</h3>
-                        </div>
-                        <div>
-                            <p>20123</p>
-                            <p>1000</p>
-                            <p>free</p>
-                            <h3>19123</h3>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>`
+            structure+=`
+            <div id="left1">
+                            <div>
+                             <img src="${products[i].proimage}"/>
+                            </div>
+                            <div>
+                             <h3>${products[i].proname}</h3>
+                             <p>Finish Colour</p>
+                             <p>Rs.${products[i].proprice}</p>
+                            </div>
+                            <div>
+                             <p>Delivery in 7 days</p>
+                            </div>
+                         </div>`;
          }
 
          divtoappend.innerHTML=structure;

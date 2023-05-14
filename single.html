@@ -478,15 +478,15 @@
     }
     function addCart(product){
         alert("adding to cart");
-        var curentUser = JSON.parse(localStorage.getItem("flipkart_currentuser"))
+        var currentUser = JSON.parse(localStorage.getItem("flipkart_currentuser"))
 
-        console.log(curentUser.uemail);
+        console.log(currentUser.uemail);
         var userdata=JSON.parse(localStorage.getItem("flipkartusers"))
         for(var i=0; i< userdata.length;i++){
             if (currentUser.uemail == userdata[i].uemail) {
                 alert("got it");
                 if (userdata[i].cartproduct === undefined) {
-                    userdata[i].cartproduct = "best wishes"
+                    userdata[i].cartproduct = "hello"
 
                     userdata[i].cartproduct = [product];
                 } else {
